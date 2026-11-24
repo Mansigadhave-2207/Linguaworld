@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaWorld</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+
+    <div class="logo-icon">
+        <i class="fa-solid fa-globe"></i>
+
+        <div class="speech">
+            <i class="fa-solid fa-comment"></i>
+            <span>L</span>
+        </div>
+
+    </div>
+
+    <div class="logo-text">
+        <h2>LinguaWorld</h2>
+    </div>
+
+</div>
+ <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<section class="hero" id="hero">
+
+    <div class="hero-content">
+
+        <!-- Left Side -->
+        <div class="hero-text">
+<div class="hero-flags">
+
+    <img src="https://flagcdn.com/w40/gb.png" alt="English">
+    <img src="https://flagcdn.com/w40/in.png" alt="Hindi">
+    <img src="https://flagcdn.com/w40/jp.png" alt="Japanese">
+    <img src="https://flagcdn.com/w40/kr.png" alt="Korean">
+    <img src="https://flagcdn.com/w40/fr.png" alt="French">
+    <img src="https://flagcdn.com/w40/de.png" alt="German">
+
+</div>
+            
+            <h1>Learn Languages <br> Without Limits</h1>
+
+            <p>
+                Master English, Hindi, Marathi, Japanese,
+                Korean, French and German through interactive
+                lessons, quizzes and pronunciation practice.
+            </p>
+
+            <a href="#languages" class="btn">Start Learning</a>
+
+        </div>
+<div class="hero-info">
+    <span>🌍 6+ Languages</span>
+    <span>📚 100+ Lessons</span>
+    <span>👨‍🎓 Beginner Friendly</span>
+</div>
+        <!-- Right Side -->
+        <div class="hero-image">
+
+            <img src="images/hero.png" alt="Language Learning">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        <img src="https://img.magnific.com/free-vector/illustration-language-concept_53876-20610.jpg?semt=ais_hybrid&w=740&q=80" alt="Language Learning">
+    </div>
+
+    <div class="about-content" >
+        <h2>🌍 About <span>LinguaWorld</span></h2>
+        <p>📚 Improve your vocabulary and grammar.</p>
+<p><i class="fa-solid fa-check"></i> Improve your vocabulary and grammar.</p>
+
+<p><i class="fa-solid fa-check"></i> Practice pronunciation with confidence.</p>
+
+<p><i class="fa-solid fa-check"></i> Test yourself with interactive quizzes.</p>
+
+<p><i class="fa-solid fa-check"></i> Learn multiple languages in one place.</p>
+        <button>Explore More</button>
+    </div>
+<div class="about-features">
+    <span>🌍 6+ Languages</span>
+    <span>📚 100+ Lessons</span>
+    <span>🎯 Interactive Quiz</span>
+</div>
+</section>
+<!-- Languages Section -->
+
+<section class="languages" id="languages">
+
+    <h2>Languages We Offer</h2>
+
+    <div class="language-container">
+
+        <div class="language-card">
+            <h3>
+    <img src="images/Uk.png" class="flag">
+    English
+</h3>
+            <p>Learn speaking, grammar and vocabulary.</p>
+            <button onclick="learnLanguage('english')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+            <h3>
+    <img src="images/india.png" class="flag">
+    Hindi
+</h3>
+            <p>Improve reading, writing and speaking skills.</p>
+            <button onclick="learnLanguage('hindi')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+             <h3>
+    <img src="images/india.png" class="flag">
+    Marathi
+</h3>
+            <p>Master Marathi communication with easy lessons.</p>
+            <button onclick="learnLanguage('marathi')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+             <h3>
+    <img src="images/japan.png" class="flag">
+    Japanese
+</h3>
+            <p>Learn Hiragana, Katakana and daily conversation.</p>
+            <button onclick="learnLanguage('japanese')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+             <h3>
+    <img src="images/korea.png" class="flag">
+    Korean
+</h3>
+            <p>Learn Hangul, grammar and K-drama expressions.</p>
+           <button onclick="learnLanguage('korean')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+             <h3>
+    <img src="images/france.png" class="flag">
+    French
+</h3>
+            <p>Speak French confidently with simple lessons.</p>
+            <button onclick="learnLanguage('french')">Learn More</button>
+        </div>
+
+        <div class="language-card">
+             <h3>
+    <img src="images/germany.png" class="flag">
+    German
+</h3>
+            <p>Build vocabulary and conversation skills.</p>
+            <button onclick="learnLanguage('german')">Learn More</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- Language Details Popup -->
+
+<div id="languageModal" class="language-modal">
+
+    <div class="language-box">
+
+        <button class="close-btn" onclick="closeLanguage()">×</button>
+
+        <h2 id="languageTitle"></h2>
+
+        <p id="languageDescription"></p>
+
+        <div class="language-topics">
+
+            <div class="topic-card"
+                 onclick="openTopic('grammar', currentLanguage)">
+                <i class="fa-solid fa-book"
+   onclick="openTopic('grammar', currentLanguage)"></i>
+                <h3>Grammar</h3>
+                <p id="grammarText"></p>
+            </div>
+
+            <div class="topic-card"  
+            onclick="openTopic('vocabulary', currentLanguage)">
+                <i class="fa-solid fa-spell-check"
+   onclick="openTopic('vocabulary', currentLanguage)"></i>
+                <h3>Vocabulary</h3>
+                <p id="vocabularyText"></p>
+            </div>
+
+            <div class="topic-card"
+            onclick="openTopic('pronunciation', currentLanguage)">
+               <i class="fa-solid fa-volume-high"
+   onclick="openTopic('pronunciation', currentLanguage)"></i>
+                <h3>Pronunciation</h3>
+                <p id="pronunciationText"></p>
+            </div>
+
+            <div class="topic-card"
+ onclick="openTopic('quiz', currentLanguage)">
+               <i class="fa-solid fa-circle-question"
+   onclick="openTopic('quiz', currentLanguage)"></i>
+                <h3>Quiz</h3>
+                <p id="quizText"></p>
+            </div>
+
+        </div>
+
+        <button class="start-language-btn" onclick="startLearning()">
+    🚀 Start Learning
+</button>
+
+    </div>
+
+</div>
+<!-- Why Choose LinguaWorld Section -->
+
+<section class="why-choose" id="quiz">
+
+    <h2>Why Choose LinguaWorld?</h2>
+    <p class="subtitle">
+        Learn languages with simple lessons, quizzes, and interactive activities.
+    </p>
+
+    <div class="choose-container">
+
+        <div class="choose-card">
+            <i class="fa-solid fa-book-open"></i>
+<h3>Easy Learning</h3>
+
+            <p>Simple lessons that help beginners learn quickly and easily.</p>
+        </div>
+
+        <div class="choose-card">
+            <i class="fa-solid fa-circle-question"></i>
+<h3>Interactive Quiz</h3>
+            <p>Practice what you learn with fun quizzes and instant results.</p>
+        </div>
+
+        <div class="choose-card">
+<i class="fa-solid fa-volume-high"></i>
+            <h3>Pronunciation Practice</h3>
+            <p>Improve your speaking skills with pronunciation support.</p>
+        </div>
+
+        <div class="choose-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3> Track Progress</h3>
+            <p>Monitor your learning journey and stay motivated.</p>
+        </div>
+
+    </div>
+    
+<a href="#languages" class="cta-btn">Start Learning Now</a>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Students Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>"LinguaWorld made learning English fun and easy!"</p>
+            <h4>- Priya</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"The quizzes helped me improve my Japanese quickly."</p>
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Best platform to learn languages for beginners."</p>
+            <h4>- Sneha</h4>
+        </div>
+
+    </div>
+</section>
+<!-- FAQ Section -->
+
+<section class="faq" id="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="faq-subtitle">
+        Find answers to common questions about LinguaWorld.
+    </p>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I start learning a language?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Choose your preferred language from the Languages section
+                    and start learning through simple lessons and quizzes.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Which languages are available?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    LinguaWorld currently offers English, Hindi, Marathi,
+                    Japanese, Korean, French and German.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is LinguaWorld beginner friendly?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes. LinguaWorld is designed with simple lessons
+                    suitable for beginners.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you provide quizzes?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes. Interactive quizzes help you practice what
+                    you learn and improve your knowledge.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I track my learning progress?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes. The Track Progress feature helps learners
+                    monitor their learning journey.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- Quiz Section -->
+
+<section class="quiz" id="quiz">
+
+    <div class="quiz-heading">
+        <h2>🧠 Language Quiz</h2>
+
+        <p>
+            Test your language knowledge with our interactive quiz.
+        </p>
+    </div>
+
+    <div class="quiz-container">
+
+        <div class="quiz-card">
+
+            <h3>Choose Your Language</h3>
+
+            <select id="languageSelect">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="marathi">Marathi</option>
+                <option value="japanese">Japanese</option>
+                <option value="korean">Korean</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+            </select>
+
+            <div class="question-box">
+
+                <h3 id="question">
+                    What is "Hello" in Japanese?
+                </h3>
+
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="answer" value="correct">
+                        Konnichiwa
+                    </label>
+
+                    <label>
+                        <input type="radio" name="answer" value="wrong">
+                        Arigato
+                    </label>
+
+                    <label>
+                        <input type="radio" name="answer" value="wrong">
+                        Sayonara
+                    </label>
+
+                    <label>
+                        <input type="radio" name="answer" value="wrong">
+                        Ohayo
+                    </label>
+
+                </div>
+
+                <button type="button" id="submitQuiz">
+                    Submit Answer
+                </button>
+
+                <p id="quizResult"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-heading">
+        <h2>Get In Touch</h2>
+        <p>
+            Have questions or suggestions?
+            We'd love to hear from you.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+
+        <div class="contact-info">
+
+            <h3>Let's Talk</h3>
+
+            <p>
+                Feel free to contact us for any questions
+                about LinguaWorld.
+            </p>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>linguaworld@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 9876543210</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h4>Location</h4>
+                    <p>Mumbai, Maharashtra</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+
+        <div class="contact-form">
+
+            <form id="contactForm">
+                <div id="formMessage"></div>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="contact-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="js/script.js"></script>
+<!-- Footer Section -->
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-box">
+            <h2>🌍 LinguaWorld</h2>
+
+            <p>
+                Learn languages easily from anywhere in the world.
+                Improve your vocabulary, grammar, pronunciation,
+                and communication skills with interactive lessons.
+            </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-box">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-box">
+
+            <h2>Contact</h2>
+
+            <p><i class="fa-solid fa-envelope"></i> linguaworld@gmail.com</p>
+
+            <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Mumbai, Maharashtra</p>
+
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-box">
+
+            <h2>Follow Us</h2>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.linkedin.com/in/your-profile" target="_blank">
+    <i class="fa-brands fa-linkedin-in"></i>
+</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+
+        <p>© 2026 LinguaWorld. All Rights Reserved.</p>
+
+    </div>
+
+
+
+</footer>
+
+<div id="topicModal" class="topic-modal">
+
+    <div class="topic-modal-content">
+
+        <span class="close-topic" onclick="closeTopic()">×</span>
+<button class="back-topic" onclick="backToGrammar()">
+        ← Back to Grammar
+    </button>
+        <div id="topicContent"></div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
